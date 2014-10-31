@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+export EDITOR=vim
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
@@ -45,10 +47,23 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\[\1\]/'
+}
+LIGHT_GREEN="\[\033[1;32m\]"
+DEFAULT="\[\033[0m\]"
+BLUE="\[\033[0;34m\]"
+RED="\[\033[0;31m\]"
+LIGHT_RED="\[\033[1;31m\]"
+GREEN="\[\033[0;32m\]"
+LIGHT_GREEN="\[\033[1;32m\]"
+WHITE="\[\033[1;37m\]"
+LIGHT_GRAY="\[\033[0;37m\]"
+
 if [ "$color_prompt"=yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]$LIGHT_GRAY\$(parse_git_branch)$DEFAULT\$ "
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    PS1="${debian_chroot:+($debian_chroot)}\u@\h:\w$(parse_git_branch)$DEFAULT\$ "
 fi
 unset color_prompt force_color_prompt
 
@@ -108,3 +123,5 @@ fi
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

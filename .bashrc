@@ -102,7 +102,7 @@ alias la='ls -Alh'
 #alias l='ls -CF'
 
 # git aliases
-alias gtc="git commit -a"
+alias gtc="git commit -a -v"
 alias gtd="git diff"
 alias gts="git status"
 

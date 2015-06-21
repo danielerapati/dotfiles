@@ -89,6 +89,11 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 
 set clipboard=unnamedplus
 
+" For using vim-tmux-runner and python
+let g:VtrStripLeadingWhitespace = 0
+let g:VtrClearEmptyLines = 0
+let g:VtrAppendNewline = 1
+let g:VtrUseVtrMaps = 1
 
 " Daniele 2014/07/10 disabled as it was slowing down ruby syntax horribly
 "set cursorline

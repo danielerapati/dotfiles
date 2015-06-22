@@ -73,6 +73,9 @@ set laststatus=1
 set autoread
 
 let mapleader=","
+nmap <silent> <leader>s :set spell!<CR>
+
+set laststatus=2
 
 " Highlight the current line and have the highlighting stay where it is when
 " the cursor is moved.  The mapping also sets mark l so you can type 'l to
@@ -94,6 +97,9 @@ let g:VtrStripLeadingWhitespace = 0
 let g:VtrClearEmptyLines = 0
 let g:VtrAppendNewline = 1
 let g:VtrUseVtrMaps = 1
+
+" For use with vim-json
+let g:vim_json_syntax_conceal = 0
 
 " Daniele 2014/07/10 disabled as it was slowing down ruby syntax horribly
 "set cursorline

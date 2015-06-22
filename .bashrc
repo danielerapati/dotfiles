@@ -47,6 +47,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# you can use ___git_ps1 instead of this
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\[\1\]/'
 }
@@ -120,6 +121,10 @@ function temp_host() {
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
+
+
+### This is for tmuxinator
+source ~/.bin/tmuxinator.bash
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"

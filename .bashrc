@@ -123,9 +123,6 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 
-### This is for tmuxinator
-source ~/.bin/tmuxinator.bash
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 

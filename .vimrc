@@ -72,6 +72,9 @@ set wildmenu
 set laststatus=1
 set autoread
 
+set splitbelow
+set splitright
+
 let mapleader=","
 nmap <silent> <leader>s :set spell!<CR>
 

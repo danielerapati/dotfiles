@@ -102,10 +102,10 @@ let g:VtrAppendNewline = 1
 let g:VtrUseVtrMaps = 1
 
 " For use with vim-json
-let g:vim_json_syntax_conceal = 0
+"let g:vim_json_syntax_conceal = 0
 
-" Daniele 2014/07/10 disabled as it was slowing down ruby syntax horribly
-"set cursorline
+set cursorline
+
 " Daniele 2014/07/10 disabled new regex engine as it was slowing down ruby
 " syntax horribly
 "set re=1

@@ -107,6 +107,7 @@ alias gtc="git commit -a -v"
 alias gtd="git diff"
 alias gts="git status"
 
+alias copypaste="xclip -i -selection clipboard > /dev/null"
 
 function temp_host() {
     local port="${1:-8000}"

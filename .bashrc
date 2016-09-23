@@ -12,7 +12,7 @@ export HISTCONTROL=ignoredups
 # ... and ignore same sucessive entries.
 export HISTCONTROL=ignoreboth
 # set history size
-export HISTFILESIZE=3000
+export HISTFILESIZE=3000000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.

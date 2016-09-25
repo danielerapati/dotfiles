@@ -12,6 +12,7 @@
 
 " Call Pathogen for plugin installation
 call pathogen#infect()
+call pathogen#helptags()
 
 " Uncomment the next line to make Vim more Vi-compatible
 " NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous

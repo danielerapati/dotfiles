@@ -19,7 +19,7 @@ git clone https://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
 git clone https://github.com/christoomey/vim-tmux-navigator.git ~/.vim/bundle/vim-tmux-navigator
 git clone https://github.com/christoomey/vim-tmux-runner.git ~/.vim/bundle/vim-tmux-runner
 git clone https://github.com/hdima/python-syntax.git ~/.vim/bundle/python-syntax
-apt install -y vim-python-jedi
+sudo apt install -y vim-python-jedi
 
 # screen
 sudo apt install -y screen

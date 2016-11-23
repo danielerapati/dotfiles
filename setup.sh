@@ -30,6 +30,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 # setup all symlinks in HOME
 ln -s `pwd`/.bashrc $HOME/.bashrc
+ln -s `pwd`/.bashrc $HOME/.bash_profile
 ln -s `pwd`/.tmux.conf $HOME/.tmux.conf
 ln -s `pwd`/.screenrc $HOME/.screenrc
 ln -s `pwd`/.vimrc $HOME/.vimrc

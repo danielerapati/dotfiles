@@ -126,3 +126,6 @@ let python_highlight_all = 1
 let b:python_version_2 = 1
 
 au BufNewFile,BufRead *.ddl setlocal filetype=sql
+
+" File Explorer uses tree style by default
+let g:netrw_liststyle=3

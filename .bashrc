@@ -194,6 +194,8 @@ alias la='ls -Alh'
 alias gtc="git commit -a -v"
 alias gtd="git diff"
 alias gts="git status"
+# embrace dislexyia
+alias gti="git"
 
 alias copypaste="xclip -i -selection clipboard > /dev/null"
 
@@ -210,6 +212,19 @@ function temp_host() {
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+. $(brew --prefix)/etc/bash_completion
+fi
+
+
+# Kill all running containers.
+alias dockerkillall='docker kill $(docker ps -q)'
+# Delete all stopped containers.
+alias dockercleanc='printf "\n>>> Deleting stopped containers\n\n" && docker rm $(docker ps -a -q)'
+# Delete all untagged images.
+alias dockercleani='printf "\n>>> Deleting untagged images\n\n" && docker rmi $(docker images -q -f dangling=true)'
+# Delete all stopped containers and untagged images.
+alias dockerclean='dockercleanc || true && dockercleani'
 
 
 ### Added by the Heroku Toolbelt

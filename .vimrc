@@ -129,3 +129,7 @@ au BufNewFile,BufRead *.ddl setlocal filetype=sql
 
 " File Explorer uses tree style by default
 let g:netrw_liststyle=3
+
+set backspace=indent,eol,start
+set scrolloff=1
+set autoread
